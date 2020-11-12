@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+<br><br><br>
+
+{% block body %}
+    <div class = "jumbotron text-center">
+        <h3>Alperen 'e Hoşgeldiniz</h3>
+        <p>Beni daha iyi tanımak için...</p>
+    </div>
+
+    {% if answer == "Yes"%}
+        <p>Deneme amaçlı if koşulu True döndü.</p>
+
+        <ul>
+        {% for number in numbers %}
+            <li> {{ number }}</li>
+        {% endfor %}
+        </ul>
+
+    {% elif answer == "Ye"%}
+        <p>İkinçi koşul çalıştı çalıştı.</p>
+    {% else %}
+        <p>Deneme amaçlı if koşulu False döndü.</p>
+    {% endif %}
+
+
+{% endblock body %}
