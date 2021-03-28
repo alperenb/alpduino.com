@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+<br><br><br>
+{% block title %}
+Login
+{% endblock  %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h3>Login</h3>
+</div>
+
+{% from "includes/formhelpers.html" import render_field %}
+<form method=post>
+    {{ render_field(form.username, class="form-control") }}
+    {{ render_field(form.password, class="form-control") }}
+    <button type="submit" value=Register class="btn btn-primary">Login</button>
+
+</form>
+
+
+{% endblock body %}

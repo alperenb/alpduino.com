@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+Add Article
+{% endblock  %}
+<br><br><br>
+
+{% block body %}
+    <div class = "jumbotron text-center">
+        <h3>Update Article</h3>
+        <small>Welcome {{ session["username"] }}</small>
+    </div>
+
+{% from "includes/formhelpers.html" import render_field %}
+<form method=post>
+    {{ render_field(form.article_title, class="form-control") }}
+    {{ render_field(form.article_content, class="form-control") }}
+    <button type="submit" value=Register class="btn btn-primary">Update</button>
+
+</form>
+
+{% endblock body %}
